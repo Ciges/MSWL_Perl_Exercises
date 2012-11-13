@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/perl -CS
 #  Ask the user to type some numbers, and sort them.
 
 use strict;

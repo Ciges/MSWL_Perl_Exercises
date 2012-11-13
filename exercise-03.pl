@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/perl -CS
 #  Exercise description
 #  Given the following code:
 #  #!/usr/bin/perl -w

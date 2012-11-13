@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/perl -CS
 #  Write a program that creates a backup of a directory storing the date in the file name:
 #  $ ./exercise-8.pl
 #  Backup done!

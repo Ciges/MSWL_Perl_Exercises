@@ -1,11 +1,10 @@
-#!/usr/bin/perl
+#!/usr/bin/perl -CS
 #  Write a program that displays the top 10 artists from any Last.fm user.
 #  http://ws.audioscrobbler.com/2.0/?method=user.getInfo&user=ciges&api_key=8a582bb6d13858f90c9d5d83d21400c1
 use strict;
 use warnings;
 use LWP::Simple;
 use XML::Simple qw(:strict);
-use Data::Dumper;
 
 #  API Key for Ciges last.fm user
 my $api_key="8a582bb6d13858f90c9d5d83d21400c1";

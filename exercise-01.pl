@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/perl -CS
 #  Given the following piece of code:
 #  #!/usr/bin/perl -w
 #  $a = 10;

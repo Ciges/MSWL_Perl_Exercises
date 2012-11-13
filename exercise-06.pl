@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/perl -CS
 #  Write a program that prints the contents of a file, omitting the lines starting with “Hide” and replacing “this” for “that”
 
 use strict;

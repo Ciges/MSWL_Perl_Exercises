@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/perl -CS
 #  Given the following code:
 #  @a = (
 #  { name => "Manolo", age => 25 },

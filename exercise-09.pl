@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/perl -CS
 #  Write a program that reads /etc/passwd to produce this output:
 #  $ ./exercise-7.pl
 #  The user ID of root is 0

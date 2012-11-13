@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/perl -CS
 # Write a program that copies a file into another, reversing the lines. Print the number of lines at the end.
 
 use strict;

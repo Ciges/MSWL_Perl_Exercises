@@ -9,6 +9,7 @@ use strict;
 use warnings;
 use LWP::Simple;
 use XML::Simple qw(:strict);
+use Data::Dumper;
 
 #  API Key for Ciges last.fm user
 my $api_key="8a582bb6d13858f90c9d5d83d21400c1";
@@ -69,11 +70,26 @@ foreach my $neighbour (@neighbours) {
     printf "\t%s\n", $neighbour;
 }
 
+my %artists = ();
 printf "\nTop 10 artists from each neighbour are: \n";
 foreach my $neighbour (@neighbours) {
     printf "%s:\n", $neighbour;
     my @topartists = &getTop10ArtistsFromUser($neighbour);
     foreach my $artist (@topartists)    {
-        printf "\t%s\n", $artist;
+        printf "\t$artist\n";
+        # Save number of ocurrences by artist
+        if (!exists($artists{$artist})) {
+            $artists{$artist} = 1;
+        }
+        else {
+            $artists{$artist}++;
+        }
     }
+}
+
+# Print artist list sorted by number of ocurrences from most popular to less popular. For the same number of ocurrences the order is by name alphabetically
+printf "\nArtist list sorted from most popular to less popular\n";
+my @sorted_artists = sort { $artists{$b} cmp $artists{$a} } sort keys %artists;
+foreach my $artist (@sorted_artists) {
+    printf "\t%s (%d hits)\n", $artist, $artists{$artist};
 }
